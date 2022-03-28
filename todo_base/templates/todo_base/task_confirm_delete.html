@@ -1,0 +1,16 @@
+{% extends 'todo_base/base.html' %}
+{% block content %}
+
+<div class="header-bar">
+    <a href="{% url 'task-list' %}">&#8592; Back</a>
+</div>
+
+<div class="card-body">
+    <form method="post">
+        {%csrf_token%}
+        <h1>Are you sure you want to delete this task? "{{task}}"</h1>
+        <input class="button" type="submit" value="Delete">
+    </form>
+</div>
+
+{% endblock %}

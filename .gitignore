@@ -1,0 +1,14 @@
+# Environments
+.env
+env/
+
+# IDEs
+.idea/
+.vscode/
+
+# Cached python
+*.pyc
+__pycache__/
+
+# local DB
+db.sqlite3

@@ -1,0 +1,27 @@
+{% extends 'todo_base/base.html' %}
+{% block content %}
+
+<div class="header-bar">
+    <a href="{% url 'task-list' %}">&#8592; Back</a>
+    <h3>Register</h3>
+</div>
+
+<div class="card-body">
+    <form method="post" action="" >
+        {%csrf_token%}
+        <!-- {{form.as_p}}
+        <input class="button" type="submit" value="Register"> -->
+        <label>{{form.username.label}}</label>
+        {{form.username}}
+
+        <label>{{form.password1.label}}</label>
+        {{form.password1}}
+
+        <label>{{form.password2.label}}</label>
+        {{form.password2}}
+        <input style="margin-top:10px ;" class="button" type="submit" value="Register">
+    </form>
+    <p>Already have an account? <a href="{% url 'login' %}">Login</a></p>
+</div>
+
+{% endblock %}
